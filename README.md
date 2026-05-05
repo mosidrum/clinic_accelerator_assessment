@@ -6,13 +6,31 @@ Reads `Scoreboard Test.xlsx` and writes a clean `output.json` any dashboard or s
 
 ## How to run it
 
+Requires Python 3.10+. Check with:
+
 ```bash
-pip install -r requirements.txt
+python3 --version
+```
+
+If `pip` is not found, install it first:
+
+```bash
+# macOS / Linux
+python3 -m ensurepip --upgrade
+
+# or, if that fails
+curl https://bootstrap.pypa.io/get-pip.py | python3
+```
+
+Then install dependencies and run:
+
+```bash
+python3 -m pip install -r requirements.txt
 python3 convert.py
 # → output.json written to the same directory
 ```
 
-Requires Python 3.10+.
+> Use `python3 -m pip` instead of `pip` — it always targets the same Python you're running the script with.
 
 Optional flags:
 
